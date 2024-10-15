@@ -1,0 +1,69 @@
+.featured-events {
+  padding: 2rem;
+  background-color: #dfcec3; /* Adjusted to match the background from the image */
+}
+
+.featured-events h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+}
+
+.event-details {
+  padding: 1rem;
+}
+
+.event-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-details p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.event-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.buy-now {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+  background-color: #555;
+}

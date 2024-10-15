@@ -1,0 +1,27 @@
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #dfcec3; /* Match the background color from the image */
+}
+
+.hero-content {
+  max-width: 60%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
