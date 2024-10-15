@@ -12,7 +12,7 @@ const events = [
   },
   {
     id: 2,
-    title: "Tum Zindagi Ban Gaye - Official | Medzy | Bollywood New Song",
+    title: "Tum Zindagi Ban Gaye - Medzy | Bollywood New Song",
     date: "Thu, 4 oct - 11:00 AM",
     location: "Ahmedabad, Gujarat",
     price: "₹799",
@@ -42,7 +42,7 @@ const FeaturedEvents = () => {
               <p>{event.location}</p>
               <div className="event-footer">
                 <span className="event-price">{event.price}</span>
-                <button className="buy-now">Buy Now</button>
+                <button className="buy-now">Book Now</button>
               </div>
             </div>
           </div>

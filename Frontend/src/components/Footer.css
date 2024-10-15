@@ -1,7 +1,7 @@
 .footer {
   padding: 2rem 1rem;
-  background-color: #333;
-  color: white;
+  background-color: #323232;
+  color: #ddd0c8;
 }
 
 .footer-content {
@@ -13,13 +13,21 @@
 
 .footer h4 {
   margin-bottom: 1rem;
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: normal;
+
 }
 
 .footer p {
   margin-bottom: 0.5rem;
+  font-size: 17px;
+  padding-left:20px;
+  font-weight: lighter;
 }
 
 .social-icons img {
   width: 30px;
-  margin-right: 10px;
+  padding-left: 20px;
+  margin-top: 15px;
 }
