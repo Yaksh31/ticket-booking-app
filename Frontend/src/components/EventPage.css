@@ -1,0 +1,11 @@
+.app-container {
+  background-color: #ddd0c8;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .content {
+    display: flex;
+    margin-top:20px;
+  }
+  

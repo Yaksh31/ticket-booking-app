@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeaturedEvents.css';
 
-const events = [
+const eventsHomePage = [
   {
     id: 1,
     title: "Oh Hello! - A stand-up Comedy Special by Talyu Pookie",
@@ -30,19 +30,19 @@ const events = [
 
 const FeaturedEvents = () => {
   return (
-    <section className="featured-events">
+    <section className="featured-events-homePage">
       <h2>Featured Events</h2>
-      <div className="events-container">
-        {events.map((event) => (
-          <div key={event.id} className="event-card">
+      <div className="events-container-homePage">
+        {eventsHomePage.map((event) => (
+          <div key={event.id} className="event-card-homePage">
             <img src={event.imgSrc} alt={event.title} />
-            <div className="event-details">
+            <div className="event-details-homePage">
               <h3>{event.title}</h3>
               <p>{event.date}</p>
               <p>{event.location}</p>
-              <div className="event-footer">
-                <span className="event-price">{event.price}</span>
-                <button className="buy-now">Book Now</button>
+              <div className="event-footer-homePage">
+                <span className="event-price-homePage">{event.price}</span>
+                <button className="buy-now-homePage">Book Now</button>
               </div>
             </div>
           </div>

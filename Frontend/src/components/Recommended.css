@@ -1,0 +1,127 @@
+/* Base styles */
+.recommended-events {
+    padding: 2rem;
+    background-color: #ddd0c8; /* Adjusted to match the background */
+  }
+  
+  .recommended-head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .recommended-events h2 {
+    text-align: left;
+    font-size: 45px;
+    margin-bottom: 3rem;
+    font-weight: normal;
+    color: #323232;
+  }
+
+  .recommended-view-more {
+    height: 50px;
+    width: 120px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 325px;
+  }
+
+  
+  
+  .recommended-events-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .recommended-event-card1 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Ensure content is stacked vertically */
+    transition: transform 0.3s ease;
+  }
+  
+  .recommended-event-card1:hover {
+    transform: translateY(-5px);
+  }
+  
+  .recommended-event-card1 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .recommended-event-details1 {
+    padding: 1rem;
+    flex: 1; /* Ensures that event details take up available vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .recommended-event-details1 h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: lighter;
+  }
+  
+  .recommended-event-details1 p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Flexbox for event-footer to align price and button */
+  .recommended-event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .recommended-event-price {
+    font-size: 1.2rem;
+    font-weight:bold;
+  }
+  
+  .recommended-buy-now {
+    background-color: #323232;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recommended-buy-now:hover {
+    background-color: #555;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For tablets and small screens */
+  @media (max-width: 1024px) {
+    .recommended-event-card {
+      width: 45%;
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .recommended-event-card {
+      width: 100%;
+    }
+  
+    .recommended-events-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

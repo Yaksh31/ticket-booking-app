@@ -1,0 +1,24 @@
+.event-list {
+  margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .view-more {
+    align-self: flex-start;
+    height: 50px;
+    width: 120px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 325px;
+  }
+  

@@ -1,0 +1,53 @@
+.event-card {
+  width: 900px; /* Fixed width for the card */
+  height: 300px; /* Fixed height for the card */
+  background-color: #ddd0c8; /* White background for the card */
+  margin: 10px; /* Margin around the card */
+  /* border: 1px solid #000000; Light gray border */
+  /* border-radius: 10px; Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange children in a row */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); Shadow effect  */
+}
+
+.event-card:hover {
+  transform:translateY(-5px);
+}
+
+.event-image img{
+  border-radius: 10px;
+  width: 450px; /* Image takes 60% of the card's width */
+  height: 300px; /* Maintain aspect ratio of the image */
+
+}
+
+.event-details {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Arrange details in a column */
+  justify-content:flex-start; /* Center the contents vertically */
+  padding: 10px; /* Padding around details */
+}
+
+.event-details h4 {
+  font-size: 20px; /* Title font size */
+  margin: 0; /* Remove margin for tighter spacing */
+  padding-bottom: 5px; /* Padding below title */
+}
+
+.event-details h5 {
+  margin: 0; /* Remove margin */
+  padding: 7px; /* Remove padding */
+  font-size: 15px; /* Subtitle font size */
+  color: #000000; /* Text color */
+  line-height: 1.2; /* Line height for subtitle */
+}
+
+/* Optional: Adjust spacing for date and location if needed */
+.event-details .event-date,
+.event-details .event-location {
+  font-size: 14px; /* Font size for date and location */
+  margin: 0; /* Remove margin */
+  padding: 2px 0; /* Small padding for spacing */
+  color: #666; /* Gray color for date and location */
+}
