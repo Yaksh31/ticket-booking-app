@@ -5,8 +5,9 @@
 }
 
 .featured-events-BookingDetails h2 {
-  text-align: center;
-  font-size: 45px;
+  text-align:center;
+  font-size: 30px;
+  margin-top: 50PX;
   margin-bottom: 3rem;
   font-weight: normal;
   color: #323232;

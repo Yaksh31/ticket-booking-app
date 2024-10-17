@@ -31,7 +31,7 @@ const eventsBookingDetails = [
 const SimilarEventsDetails = () => {
   return (
     <section className="featured-events-BookingDetails">
-      <h2>Featured Events</h2>
+      <h2>YOU MAY LOVE THESE TOO </h2>
       <div className="events-container-BookingDetails">
         {eventsBookingDetails.map((event) => (
           <div key={event.id} className="event-card-BookingDetails">

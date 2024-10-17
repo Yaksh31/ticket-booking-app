@@ -8,8 +8,8 @@ import Footer from './Footer';
 const EventDetailsSection = () => {
   return (
     <div className="event-page-container">
-      <Header/>
-      
+      <Header />
+
       {/* Event Details Section */}
       <div className="event-details-container">
         <div className="event-image">
@@ -21,8 +21,13 @@ const EventDetailsSection = () => {
           <p><i className="fa fa-calendar"></i> Wed, 3 Oct - 5:00 PM</p>
           <p><i className="fa fa-map-marker"></i> Vadodara, Gujarat</p>
           <div className="ticket-section">
-            <span>₹499</span>
-            <button>Book Now</button>
+            {/* <span>₹499</span> */}
+            <button className="view-more">
+              <span className="price">₹499</span>
+              <span className="divider">|</span>
+              <span className="buy-text">Buy Now</span>
+            </button>
+
           </div>
         </div>
       </div>
@@ -37,13 +42,13 @@ const EventDetailsSection = () => {
         <p>And don't miss the surprise waiting for you at the end!</p>
         <p>Rahul has poured years of love and labor into this show, and now it's your turn to enjoy the fun.</p>
       </div>
-      <SimilarEventsDetails/>
-      <Footer/>
-      
-      
-      
-      
-      
+      <SimilarEventsDetails />
+      <Footer />
+
+
+
+
+
     </div>
   );
 };

@@ -10,8 +10,8 @@ body, html {
 .event-page-container {
   max-width: 100%;
   margin: 0;
-  padding: 20px 5%; /* This ensures that the padding is relative to screen size for better responsiveness */
-  background-color: #f5eae1; /* Light beige background color */
+  /* padding: 20px 5%; This ensures that the padding is relative to screen size for better responsiveness */
+  background-color: #ddd0c8; /* Light beige background color */
   font-family: 'Arial', sans-serif;
   min-height: 100vh; /* Ensure it fills the height of the viewport */
 }
@@ -19,10 +19,10 @@ body, html {
 /* Event details section */
 .event-details-container {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid #ccc;
+  justify-content:center;
+  /* border: 1px solid #ccc; */
   border-radius: 10px;
-  background-color: white;
+  background-color: #ddd0c8;
   overflow: hidden;
   padding: 20px;
   margin-bottom: 30px;
@@ -30,38 +30,36 @@ body, html {
 
 /* Event image styling */
 .event-image img {
-  width: 100%;
-  max-width: 500px; /* Maintain the current size constraint */
-  height: auto;
+  height: 350px;
+  width: 600px;
   border-radius: 10px;
-  border: 2px solid #0066cc; /* Blue border similar to image */
 }
 
 /* Event information */
 .event-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 20px;
+  justify-content:flex-start;
+  margin-left: 50px;
   max-width: 400px;
 }
 
 .event-info h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #323232;
 }
 
 .event-info h3 {
   font-size: 18px;
   font-weight: normal;
-  color: #888;
+  color: #323232;
   margin-bottom: 10px;
 }
 
 .event-info p {
   font-size: 16px;
-  color: #555;
+  color: #323232;
   margin: 5px 0;
 }
 
@@ -73,7 +71,7 @@ body, html {
   margin-top: 20px;
 }
 
-.ticket-section span {
+/* .ticket-section span {
   font-size: 20px;
   font-weight: bold;
   color: #333;
@@ -91,22 +89,73 @@ body, html {
 
 .ticket-section button:hover {
   background-color: #444;
+} */
+
+.view-more {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  background-color: #2d2d2d;  /* Dark background similar to the image */
+  color: #f1f1f1;             /* Light text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 0px;
 }
+
+.view-more:hover {
+  background-color: #1e1e1e;  /* Slightly darker on hover */
+}
+
+.view-more .price, 
+.view-more .buy-text {
+  margin: 0;
+  color: #ddd0c8;
+}
+
+.view-more .divider {
+  /* margin: 0 10px;   Space around the divider */
+  margin-left: 250px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #ddd0c8; 
+    /* Light grey color for divider */
+}
+
+.view-more .price {
+  font-weight:normal; /* Emphasizing the price */
+}
+
+.view-more .buy-text {
+  font-weight: normal;
+  
+}
+
 
 /* About section */
 .about-section {
   margin-top: 30px;
+  /* margin-left: 500px; */
 }
 
 .about-section h2 {
+  text-align: center;
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #323232;
 }
 
 .about-section p {
+  width: 900px;
+  text-align: center;
+  margin-left: 500px;
   font-size: 16px;
-  color: #555;
+  color: #323232;
   line-height: 1.6;
 }
 
@@ -170,3 +219,4 @@ body, html {
     font-size: 14px;
   }
 }
+
