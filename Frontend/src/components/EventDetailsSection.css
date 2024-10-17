@@ -1,0 +1,172 @@
+/* Container for the entire event page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f5eae1; /* Apply the background color globally */
+}
+
+/* Container for the entire event page */
+.event-page-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 5%; /* This ensures that the padding is relative to screen size for better responsiveness */
+  background-color: #f5eae1; /* Light beige background color */
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh; /* Ensure it fills the height of the viewport */
+}
+
+/* Event details section */
+.event-details-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Event image styling */
+.event-image img {
+  width: 100%;
+  max-width: 500px; /* Maintain the current size constraint */
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #0066cc; /* Blue border similar to image */
+}
+
+/* Event information */
+.event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  max-width: 400px;
+}
+
+.event-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.event-info h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.event-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Ticket section with price and button */
+.ticket-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ticket-section span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ticket-section button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ticket-section button:hover {
+  background-color: #444;
+}
+
+/* About section */
+.about-section {
+  margin-top: 30px;
+}
+
+.about-section h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------------------- */
+/* Responsive Design */
+/* ---------------------- */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  .event-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .event-image img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .event-info {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ticket-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ticket-section span,
+  .ticket-section button {
+    width: 100%;
+  }
+
+  .about-section p {
+    text-align: justify;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  .event-info h1 {
+    font-size: 20px;
+  }
+
+  .event-info h3 {
+    font-size: 16px;
+  }
+
+  .ticket-section button {
+    font-size: 14px;
+  }
+
+  .about-section h2 {
+    font-size: 20px;
+  }
+
+  .about-section p {
+    font-size: 14px;
+  }
+}
