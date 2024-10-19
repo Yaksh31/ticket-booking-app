@@ -15,7 +15,7 @@ const EventList = ({ events = [] }) => {
       ) : (
         <p>No events available</p>
       )}
-      <button className="view-more">View more</button>
+      <button className="view-more-eventList">View more</button>
       
     </div>
   );

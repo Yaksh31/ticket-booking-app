@@ -29,35 +29,35 @@ body, html {
 }
 
 /* Event image styling */
-.event-image img {
+.event-details-image img {
   height: 350px;
   width: 600px;
   border-radius: 10px;
 }
 
 /* Event information */
-.event-info {
+.event-details-info {
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
   margin-left: 50px;
-  max-width: 400px;
+  max-width: 500px;
 }
 
-.event-info h1 {
+.event-details-info h1 {
   font-size: 24px;
   font-weight: bold;
   color: #323232;
 }
 
-.event-info h3 {
+.event-details-info h3 {
   font-size: 18px;
   font-weight: normal;
   color: #323232;
   margin-bottom: 10px;
 }
 
-.event-info p {
+.event-details-info p {
   font-size: 16px;
   color: #323232;
   margin: 5px 0;
@@ -91,8 +91,8 @@ body, html {
   background-color: #444;
 } */
 
-.view-more {
-  width: 900px;
+.buy-button-eds {
+  width: 390px;
   display: flex;
   align-items: center;
   /* justify-content: space-between; */
@@ -107,30 +107,30 @@ body, html {
   margin: 0px;
 }
 
-.view-more:hover {
+.buy-button-eds:hover {
   background-color: #1e1e1e;  /* Slightly darker on hover */
 }
 
-.view-more .price, 
-.view-more .buy-text {
+.buy-button-eds .price, 
+.buy-button-eds .buy-text {
   margin: 0;
   color: #ddd0c8;
 }
 
-.view-more .divider {
+.buy-button-eds .divider {
   /* margin: 0 10px;   Space around the divider */
-  margin-left: 250px;
+  margin-left: 230px;
   margin-right: 5px;
   font-size: 20px;
   color: #ddd0c8; 
     /* Light grey color for divider */
 }
 
-.view-more .price {
+.buy-button-eds .price {
   font-weight:normal; /* Emphasizing the price */
 }
 
-.view-more .buy-text {
+.buy-button-eds.buy-text {
   font-weight: normal;
   
 }
@@ -139,7 +139,9 @@ body, html {
 /* About section */
 .about-section {
   margin-top: 30px;
-  /* margin-left: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
 }
 
 .about-section h2 {
@@ -151,12 +153,37 @@ body, html {
 }
 
 .about-section p {
-  width: 900px;
+  width: 100%;
+  max-width: 900px; /* Set a max-width to keep the width on large screens */
   text-align: center;
-  margin-left: 500px;
+  margin: 0 auto; /* Center horizontally */
   font-size: 16px;
   color: #323232;
   line-height: 1.6;
+  padding: 0 20px; /* Padding for smaller screens */
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  .about-section p {
+    font-size: 15px; /* Slightly reduce font size */
+    padding: 0 15px; /* Adjust padding to prevent content from touching edges */
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  .about-section h2 {
+    font-size: 20px; /* Adjust font size for small screens */
+  }
+
+  .about-section p {
+    font-size: 14px; /* Reduce font size further for small screens */
+    line-height: 1.5;
+    padding: 0 10px; /* Ensure padding for mobile screens */
+  }
 }
 
 /* ---------------------- */

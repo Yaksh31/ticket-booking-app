@@ -1,0 +1,21 @@
+/* EventHeader.css */
+.event-header {
+    text-align: center;
+    background-color: #d7c7b6;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    border:1px solid #555 ;
+  }
+  
+  .event-header h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .event-header p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #555;
+  }
+  

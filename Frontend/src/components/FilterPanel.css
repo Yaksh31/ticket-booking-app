@@ -1,5 +1,5 @@
 .filter-panel {
-    width: 200px;
+    width: 250px;
     height: 600px;
     background-color: #d7c7b6;
     padding: 20px;
@@ -24,7 +24,7 @@
     margin: 5px 0;
   }
   
-  .apply-button, .clear-button {
+  .filter-apply-button, .filter-clear-button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -33,12 +33,12 @@
     cursor: pointer;
   }
   
-  .apply-button {
+  .filter-apply-button {
     background-color: #333;
     color: white;
   }
   
-  .clear-button {
+  .filter-clear-button {
     background-color: #ccc;
     color: black;
     margin-top: 10px;

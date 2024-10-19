@@ -1,0 +1,28 @@
+/* App.css */
+.checkout-header{
+    width: 100%;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #ddd0c8;
+}
+.checkout-app {
+    /* width: 50%; */
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #ddd0c8;
+    /* padding: 20px; */
+  }
+  
+  .checkout-tickets-section {
+    width: 50%;
+    margin: 20px 0;
+  }
+
+  .checkout-order{
+    width: 50%;
+  }
+
+  .checkout-event-header{
+    width: 50%;
+  }
+  

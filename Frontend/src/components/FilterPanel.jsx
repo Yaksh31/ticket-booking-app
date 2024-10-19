@@ -31,8 +31,8 @@ const FilterPanel = () => {
           <li><input type="checkbox" /> Gujarati</li>
         </ul>
       </div>
-      <button className="apply-button">Apply</button>
-      <button className="clear-button">Clear all</button>
+      <button className="filter-apply-button">Apply</button>
+      <button className="filter-clear-button">Clear all</button>
     </div>
   );
 };

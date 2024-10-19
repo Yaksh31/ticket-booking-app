@@ -1,0 +1,42 @@
+    /* TicketOption.css */
+.ticket-option {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #555;
+    margin: 10px 0;
+    margin-left: 460px;
+    border-radius: 8px;
+    background-color: #d7c7b6;
+  }
+  
+  .ticket-info h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .ticket-info p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .ticket-action h5 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .ticket-action button {
+    background-color: #323232;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ticket-action button:hover {
+    background-color: #555;
+  }
+  

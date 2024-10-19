@@ -1,4 +1,5 @@
 .footer {
+  height: 250px;
   padding: 2rem 1rem;
   background-color: #323232;
   color: #ddd0c8;
@@ -8,7 +9,9 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
+  margin-top: 20px;
+  /* margin-left: 70px; */
+  margin-right: 90px; 
 }
 
 .footer h4 {
@@ -27,7 +30,8 @@
 }
 
 .social-icons img {
-  width: 30px;
+  height: 30px;
+  width: 50px;
   padding-left: 20px;
   margin-top: 15px;
 }

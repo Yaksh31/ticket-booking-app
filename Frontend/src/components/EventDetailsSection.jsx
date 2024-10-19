@@ -12,20 +12,20 @@ const EventDetailsSection = () => {
 
       {/* Event Details Section */}
       <div className="event-details-container">
-        <div className="event-image">
+        <div className="event-details-image">
           <img src="src\assets\ohHello.jpg" alt="Event Poster" />
         </div>
-        <div className="event-info">
+        <div className="event-details-info">
           <h1>Oh Hello! - A stand-up Comedy Special by Talyu Pookie 🎀</h1>
           <h3>Comedy</h3>
           <p><i className="fa fa-calendar"></i> Wed, 3 Oct - 5:00 PM</p>
           <p><i className="fa fa-map-marker"></i> Vadodara, Gujarat</p>
           <div className="ticket-section">
             {/* <span>₹499</span> */}
-            <button className="view-more">
+            <button className="buy-button-eds">
               <span className="price">₹499</span>
               <span className="divider">|</span>
-              <span className="buy-text">Buy Now</span>
+              <span className="buy-text">Book Now</span>
             </button>
 
           </div>

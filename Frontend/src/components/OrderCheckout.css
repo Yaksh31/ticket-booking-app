@@ -1,0 +1,83 @@
+/* OrderCheckout.css */
+.order-checkout {
+    width: 48%;
+    border: 1px solid #555;
+    padding: 20px;
+    margin: 20px 0;
+    margin-left: 460px;
+    border-radius: 8px;
+    background-color: #d7c7b6;
+  }
+  
+  .order-checkout h3 {
+    margin: 0 0 15px;
+  }
+  
+  .tickets-summary {
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+  }
+  
+  .ticket-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .ticket-details p {
+    margin: 0;
+  }
+  
+  .ticket-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .ticket-actions button {
+    background-color: #323232;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .ticket-actions button:hover {
+    background-color: #555;
+  }
+  
+  .payment-details {
+    margin-top: 20px;
+  }
+  
+  .payment-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .payment-row p {
+    margin: 0;
+  }
+  
+  .total p {
+    font-weight: bold;
+  }
+  
+  .continue-button {
+    background-color: #323232;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .continue-button:hover {
+    background-color: #555;
+  }
+  
