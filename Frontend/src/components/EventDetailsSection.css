@@ -1,5 +1,6 @@
 /* Container for the entire event page */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -10,7 +11,6 @@ body, html {
 .event-page-container {
   max-width: 100%;
   margin: 0;
-  /* padding: 20px 5%; This ensures that the padding is relative to screen size for better responsiveness */
   background-color: #ddd0c8; /* Light beige background color */
   font-family: 'Arial', sans-serif;
   min-height: 100vh; /* Ensure it fills the height of the viewport */
@@ -19,8 +19,7 @@ body, html {
 /* Event details section */
 .event-details-container {
   display: flex;
-  justify-content:center;
-  /* border: 1px solid #ccc; */
+  justify-content: center;
   border-radius: 10px;
   background-color: #ddd0c8;
   overflow: hidden;
@@ -39,7 +38,7 @@ body, html {
 .event-details-info {
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   margin-left: 50px;
   max-width: 500px;
 }
@@ -71,33 +70,12 @@ body, html {
   margin-top: 20px;
 }
 
-/* .ticket-section span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-.ticket-section button {
-  padding: 10px 20px;
-  background-color: #000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.ticket-section button:hover {
-  background-color: #444;
-} */
-
 .buy-button-eds {
   width: 390px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  background-color: #2d2d2d;  /* Dark background similar to the image */
-  color: #f1f1f1;             /* Light text color */
+  background-color: #2d2d2d; /* Dark background similar to the image */
+  color: #f1f1f1; /* Light text color */
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -108,33 +86,29 @@ body, html {
 }
 
 .buy-button-eds:hover {
-  background-color: #1e1e1e;  /* Slightly darker on hover */
+  background-color: #1e1e1e; /* Slightly darker on hover */
 }
 
-.buy-button-eds .price, 
+.buy-button-eds .price,
 .buy-button-eds .buy-text {
   margin: 0;
   color: #ddd0c8;
 }
 
 .buy-button-eds .divider {
-  /* margin: 0 10px;   Space around the divider */
   margin-left: 230px;
   margin-right: 5px;
   font-size: 20px;
-  color: #ddd0c8; 
-    /* Light grey color for divider */
+  color: #ddd0c8; /* Light grey color for divider */
 }
 
 .buy-button-eds .price {
-  font-weight:normal; /* Emphasizing the price */
+  font-weight: normal; /* Emphasizing the price */
 }
 
 .buy-button-eds.buy-text {
   font-weight: normal;
-  
 }
-
 
 /* About section */
 .about-section {
@@ -198,12 +172,12 @@ body, html {
     padding: 15px;
   }
 
-  .event-image img {
+  .event-details-image img {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .event-info {
+  .event-details-info {
     margin-left: 0;
     max-width: 100%;
     text-align: center;
@@ -226,11 +200,11 @@ body, html {
 
 /* For mobile devices */
 @media screen and (max-width: 480px) {
-  .event-info h1 {
+  .event-details-info h1 {
     font-size: 20px;
   }
 
-  .event-info h3 {
+  .event-details-info h3 {
     font-size: 16px;
   }
 
@@ -246,4 +220,3 @@ body, html {
     font-size: 14px;
   }
 }
-

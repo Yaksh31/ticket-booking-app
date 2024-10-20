@@ -5,7 +5,7 @@ import EventPage from "./components/EventPage";
 import HelpPage from "./components/HelpPage";
 import LoginPage from "./components/LoginPage";
 import Signup from "./components/Signup";
-import EventDetailsSection from "./components/EventDetailsSection";
+import EventDetailsSection from "./components/EventDetailsSection"; // Make sure this is correctly imported
 import Checkout from "./components/Checkout";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/event-details" element={<EventDetailsSection />} />
+        <Route path="/event/:id" element={<EventDetailsSection />} /> {/* Dynamic route for event details */}
       </Routes>
     </Router>
   );

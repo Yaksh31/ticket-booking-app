@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Signup.css';
 
 const Signup = () => {
@@ -7,7 +8,7 @@ const Signup = () => {
       <div className="signup-box">
         {/* Left side with the image */}
         <div className="signup-image">
-          <img src="src\assets\LoginSignup_img.jpg" alt="Signup Illustration" />
+          <img src="src/assets/LoginSignup_img.jpg" alt="Signup Illustration" />
         </div>
 
         {/* Right side with the form */}
@@ -38,7 +39,7 @@ const Signup = () => {
 
           {/* Links for existing users */}
           <div className="signup-links">
-            <a href="#">Already have an account? Log In</a>
+            <Link to="/login">Already have an account? Log In</Link> {/* Link to Login page */}
           </div>
         </div>
       </div>

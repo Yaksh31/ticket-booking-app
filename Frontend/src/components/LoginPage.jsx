@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './LoginPage.css';
 
 const Login = () => {
@@ -6,7 +7,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <div className="login-image">
-          <img src="src\assets\LoginSignup_img.jpg" alt="" />
+          <img src="src/assets/LoginSignup_img.jpg" alt="Login Illustration" />
         </div>
         <div className="login-form">
           <h2>Log In</h2>
@@ -23,7 +24,7 @@ const Login = () => {
           </form>
           <div className="login-links">
             <a href="#">Forgot Your Password? Reset Password</a><br/>
-            <a href="#">New User? Sign up</a>
+            <Link to="/signup">New User? Sign up</Link> {/* Link to Sign Up page */}
           </div>
         </div>
       </div>
