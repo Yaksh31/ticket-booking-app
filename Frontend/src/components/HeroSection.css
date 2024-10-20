@@ -8,6 +8,7 @@
 
 .hero-content {
   max-width: 60%;
+  margin-left: 50px;
 }
 
 .hero-content h1 {
@@ -36,4 +37,5 @@
 .hero-image img {
   max-width: 100%;
   height: auto;
+  margin-right: 30px;
 }

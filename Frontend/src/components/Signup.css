@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3e8df; /* Outer background color */
+  background-color: #ddd0c8; /* Outer background color */
 }
 
 /* Box that holds both image and form */
@@ -43,7 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  /* padding: 40px; */
   color: white;
 }
 

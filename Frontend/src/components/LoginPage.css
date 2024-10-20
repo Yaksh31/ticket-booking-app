@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3e8df; /* Outer background color */
+  background-color: #ddd0c8; /* Outer background color */
 }
 
 /* Box that holds both image and form */
@@ -43,7 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  /* padding: 20px; */
   color: white;
 }
 
@@ -68,13 +68,15 @@
 }
 
 .input-container input {
-  width: 100%;
+  width: 100%; /* This will already ensure the input takes the full width of its container */
+  max-width: 400px; /* Set a maximum width to make the fields broader, you can adjust this as needed */
   padding: 10px;
   border-radius: 5px;
   border: none;
   background-color: #eee;
   font-size: 1rem;
 }
+
 
 /* Button styling */
 .login-button {

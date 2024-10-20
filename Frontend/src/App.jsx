@@ -10,8 +10,8 @@ import HelpPage from "./components/HelpPage";
 function App() {
   return (
     <>
-      {/* <LoginPage />
-      <Signup/> */}
+      <LoginPage />
+      <Signup/>
        <HomePage/> 
       <EventPage/>
       <EventDetailsSection/>
