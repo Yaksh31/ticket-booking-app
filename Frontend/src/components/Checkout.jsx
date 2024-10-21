@@ -12,7 +12,6 @@ const Checkout = () => {
   const [tickets, setTickets] = useState([]);
   const { eventId } = useParams(); // Get eventId from the URL
   const location = useLocation();
-  
 
   const addTicket = (ticketName, price) => {
     const existingTicket = tickets.find((ticket) => ticket.name === ticketName);
@@ -62,8 +61,8 @@ const Checkout = () => {
 
   // Handle booking API call
   const handleBooking = async () => {
-    if (!localStorage.getItem('token')) {
-      alert('You need to be logged in to book tickets');
+    if (!localStorage.getItem("token")) {
+      alert("You need to be logged in to book tickets");
       return;
     }
 
@@ -74,19 +73,25 @@ const Checkout = () => {
         totalPrice: total, // Include the total amount including booking fee
       };
 
-      const response = await axios.post('http://localhost:3000/api/bookings', bookingData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/bookings",
+        bookingData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`, // Corrected Authorization header
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.status === 201) {
-        alert('Booking successful!');
+        alert("Booking successful!");
         // Redirect or reset tickets here
+      } else {
+        throw new Error("Booking failed");
       }
     } catch (error) {
-      console.error('Error creating booking:', error.response?.data || error.message);
+      console.error("Error creating booking:", error.response?.data || error.message);
       alert(`Booking failed: ${error.response?.data?.message || error.message}`);
     }
   };
