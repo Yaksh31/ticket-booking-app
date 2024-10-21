@@ -1,11 +1,21 @@
 const Booking = require("../models/Booking");
 const Event = require("../models/Event");
 const User = require("../models/User");
+const mongoose = require("mongoose");
 
 // Create a booking
 const createBooking = async (req, res) => {
   try {
     const { event, seats, totalPrice } = req.body;
+
+    console.log("Request Body:", req.body);
+
+
+    // Validate request body
+    if (!event || !seats || !totalPrice) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
     const user = req.user.userId; // Assuming user ID is attached by auth middleware
 
     // Check if the event exists and has enough available seats
@@ -34,7 +44,8 @@ const createBooking = async (req, res) => {
 
     res.status(201).json(booking);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Error creating booking:", error); // Improved error logging
+    res.status(500).json({ message: "An error occurred while creating the booking" });
   }
 };
 
@@ -45,7 +56,8 @@ const getUserBookings = async (req, res) => {
     const bookings = await Booking.find({ user: userId }).populate("event");
     res.json(bookings);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Error fetching user bookings:", error); // Improved error logging
+    res.status(500).json({ message: "An error occurred while fetching bookings" });
   }
 };
 
@@ -59,7 +71,8 @@ const getBookingById = async (req, res) => {
     }
     res.json(booking);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Error fetching booking:", error); // Improved error logging
+    res.status(500).json({ message: "An error occurred while fetching the booking" });
   }
 };
 
@@ -74,9 +87,7 @@ const cancelBooking = async (req, res) => {
 
     // Check if the booking belongs to the logged-in user
     if (booking.user.toString() !== req.user.userId) {
-      return res
-        .status(403)
-        .json({ message: "Not authorized to cancel this booking" });
+      return res.status(403).json({ message: "Not authorized to cancel this booking" });
     }
 
     // Update the event's available seats
@@ -88,7 +99,8 @@ const cancelBooking = async (req, res) => {
     await booking.deleteOne({ _id: bookingId });
     res.json({ message: "Booking canceled" });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    console.error("Error canceling booking:", error); // Improved error logging
+    res.status(500).json({ message: "An error occurred while canceling the booking" });
   }
 };
 

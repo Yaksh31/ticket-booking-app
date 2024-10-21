@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.css';
 
+import instaLogo from "../assets/instaLogo.png"
+import whatsAppLogo from "../assets/WhatsAppLogo.png"
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -19,8 +22,8 @@ const Footer = () => {
           <p>Email: dev.yaksh@gmail.com</p>
           <p>Phone: +919327007871</p>
           <div className="social-icons">
-            <img src="src\assets\WhatsAppLogo.png" alt="WhatsApp" />
-            <img src="src\assets\instaLogo.png" alt="Instagram" />
+            <img src={ whatsAppLogo} alt="WhatsApp" />
+            <img src={instaLogo} alt="Instagram" />
           </div>
         </div>
       </div>

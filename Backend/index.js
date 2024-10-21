@@ -2,6 +2,8 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
+const authenticateToken = require("./middlewares/authenticateToken");
 const connectDB = require("./config/database");
 const app = express();
 const userRoutes = require("./routes/userRoutes");
@@ -15,6 +17,7 @@ connectDB();
 
 // Middleware to parse JSON bodies:
 app.use(express.json());
+app.use(cors());
 
 // Routes:
 app.get("/", (req, res) => {
@@ -22,9 +25,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/users", userRoutes);
-app.use("/api/events",eventRoutes);
-app.use("/api/bookings",bookingRoutes);
-app.use("/api/payments",paymentRoutes);
+app.use("/api/events", eventRoutes);
+app.use("/api/bookings",  bookingRoutes);
+app.use("/api/payments", paymentRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

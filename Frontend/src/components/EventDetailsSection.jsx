@@ -28,7 +28,7 @@ Fully family-friendly, this special is perfect to watch with anyone — parents,
 
 And don't miss the surprise waiting for you at the end!
 
-Rahul has poured years of love and labor into this show, and now it's your turn to enjoy the fun.`,
+Rahul has poured years of love and labor into this show, and now it's your turn to enjoy the fun.`,
     imgSrc: ohHello, // Use imported image here
   },
   {
@@ -37,8 +37,7 @@ Rahul has poured years of love and labor into this show, and now it's your turn 
     date: "Thu, 4 Oct - 11:00 AM",
     location: "Ahmedabad, Gujarat",
     price: "₹799",
-    description:
-      "Enjoy Medzy's latest Bollywood song 'Tum Zindagi Ban Gaye'...",
+    description: "Enjoy Medzy's latest Bollywood song 'Tum Zindagi Ban Gaye'...",
     imgSrc: featureEvent2, // Use imported image here
   },
   {
@@ -72,7 +71,7 @@ const EventDetailsSection = () => {
           <h3>{event.date}</h3>
           <p>{event.location}</p>
           <div className="ticket-section">
-            <Link to="/checkout" style={{textDecoration:'none'}}>
+            <Link to={`/checkout/${event.id}`} style={{ textDecoration: 'none' }}> {/* Change event._id to event.id */}
               <button className="buy-button-eds">
                 <span className="price">{event.price}</span>
                 <span className="divider">|</span>

@@ -4,7 +4,7 @@ import EventCard from './EventCard';
 import './EventList.css';
 
 const EventList = ({ events = [] }) => {
-    console.log(events)
+    //console.log(events)
   // Ensure events is defined or default to an empty array
   return (
     <div className="event-list">

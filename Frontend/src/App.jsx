@@ -18,7 +18,7 @@ function App() {
         <Route path="/support" element={<HelpPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout/:eventId" element={<Checkout />} />
         <Route path="/event/:id" element={<EventDetailsSection />} /> {/* Dynamic route for event details */}
       </Routes>
     </Router>
