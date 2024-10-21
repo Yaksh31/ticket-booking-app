@@ -17,7 +17,10 @@ connectDB();
 
 // Middleware to parse JSON bodies:
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',  // Frontend URL
+  credentials: true,                // Allow credentials (cookies, tokens)
+}));
 
 // Routes:
 app.get("/", (req, res) => {
@@ -26,7 +29,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", userRoutes);
 app.use("/api/events", eventRoutes);
-app.use("/api/bookings",  bookingRoutes);
+app.use("/api/bookings", bookingRoutes);
 app.use("/api/payments", paymentRoutes);
 
 app.listen(PORT, () => {

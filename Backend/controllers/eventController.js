@@ -2,13 +2,6 @@ const Event = require("../models/Event");
 
 // Get all events
 const getAllEvents = async (req, res) => {
-  const eventId = req.params.id;
-
-  // validate the ObjectId:
-  if (!mongoose.Types.ObjectId.isValid(eventId)) {
-    return res.status(400).json({ message: "Invalid event ID format" });
-  }
-
   try {
     const events = await Event.find();
     res.json(events);

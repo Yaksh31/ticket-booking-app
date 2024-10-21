@@ -1,6 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose=require ('mongoose')
 
-// Event Schema
 const eventSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -27,6 +26,10 @@ const eventSchema = new mongoose.Schema({
     },
     totalSeats: {
         type: Number,
+        required: true,
+    },
+    imageName: { // Only store the image filename
+        type: String,
         required: true,
     },
     createdAt: {
