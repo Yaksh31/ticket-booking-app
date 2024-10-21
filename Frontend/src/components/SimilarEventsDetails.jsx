@@ -5,6 +5,7 @@ import './SimilarEventsDetails.css';
 import eventCard1 from '../assets/event_card_5.png';
 import eventCard2 from '../assets/event_card_6.png';
 import eventCard3 from '../assets/event_card_7.png';
+import { Link } from 'react-router-dom';
 
 const eventsBookingDetails = [
   {
@@ -40,6 +41,9 @@ const SimilarEventsDetails = () => {
       <div className="events-container-BookingDetails">
         {eventsBookingDetails.map((event) => (
           <div key={event.id} className="event-card-BookingDetails">
+            {/* Link to EventDetailsSection using the event ID */}
+            {/* <Link to= {`/event/${event.id}`} style={{ textDecoration: 'none' }}></Link> */}
+                  
             <img src={event.imgSrc} alt={event.title} />
             <div className="event-details-BookingDetails">
               <h3>{event.title}</h3>
@@ -50,6 +54,7 @@ const SimilarEventsDetails = () => {
                 <button className="buy-now-BookingDetails">Book Now</button>
               </div>
             </div>
+            
           </div>
         ))}
       </div>

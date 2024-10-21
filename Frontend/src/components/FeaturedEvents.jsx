@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
-import './FeaturedEvents.css';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import "./FeaturedEvents.css";
 
 const eventsHomePage = [
   {
@@ -26,38 +26,34 @@ const eventsHomePage = [
     location: "Modasa, Gujarat",
     price: "₹2999",
     imgSrc: "src/assets/stockMarket.jpg",
-  }
+  },
 ];
 
 const FeaturedEvents = () => {
-  const navigate = useNavigate();  // Initialize navigate
-
-  const handleNavigate = (id) => {
-    navigate(`/event/${id}`);  // Navigate to the event details page with dynamic id
-  };
-
   return (
     <section className="featured-events-homePage">
       <h2>Featured Events</h2>
       <div className="events-container-homePage">
         {eventsHomePage.map((event) => (
           <div key={event.id} className="event-card-homePage">
-            <img src={event.imgSrc} alt={event.title} />
-            <div className="event-details-homePage">
-              <h3>{event.title}</h3>
-              <p>{event.date}</p>
-              <p>{event.location}</p>
-              <div className="event-footer-homePage">
-                <span className="event-price-homePage">{event.price}</span>
-                {/* No Link used, just button with click handler */}
-                <button 
-                  className="buy-now-homePage"
-                  onClick={() => handleNavigate(event.id)}  // Call the handleNavigate function
-                >
-                  Book Now
-                </button>
+            <Link to={`/event/${event.id}`} style={{ textDecoration: "none" }}>
+              <img src={event.imgSrc} alt={event.title} />
+              <div className="event-details-homePage">
+                <h3>{event.title}</h3>
+                <p>{event.date}</p>
+                <p>{event.location}</p>
+                <div className="event-footer-homePage">
+                  <span className="event-price-homePage">{event.price}</span>
+                  {/* No Link used, just button with click handler */}
+                  <button
+                    className="buy-now-homePage"
+                    // onClick={() => handleNavigate(event.id)}  // Call the handleNavigate function
+                  >
+                    Book Now
+                  </button>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

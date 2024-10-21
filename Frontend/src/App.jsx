@@ -5,7 +5,7 @@ import EventPage from "./components/EventPage";
 import HelpPage from "./components/HelpPage";
 import LoginPage from "./components/LoginPage";
 import Signup from "./components/Signup";
-import EventDetailsSection from "./components/EventDetailsSection"; // Make sure this is correctly imported
+import EventDetailsSection from "./components/EventDetailsSection";
 import Checkout from "./components/Checkout";
 
 function App() {

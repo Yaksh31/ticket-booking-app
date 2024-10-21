@@ -50,6 +50,7 @@
 }
 
 .event-details-homePage h3 {
+  color:#000;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-weight: lighter;
@@ -70,6 +71,7 @@
 }
 
 .event-price-homePage{
+  color:#000;
   font-size: 1.2rem;
   font-weight:bold;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './EventCard.css';
+import { Link } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
   // Construct the relative path to the assets folder within the src directory
@@ -7,6 +8,7 @@ const EventCard = ({ event }) => {
 
   return (
     <div className="event-card">
+      
       <div className="event-image">
         {/* Render the image from the dynamically constructed path */}
         <img src={eventImage} alt={event.title} />

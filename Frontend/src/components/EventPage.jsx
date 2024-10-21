@@ -43,7 +43,7 @@ function EventPage() {
           <EventList events={events} />
         )}
       </div>
-      <Recommended />
+      <Recommended /> {/* Display the recommended events */}
       <Footer />
     </div>
   );
