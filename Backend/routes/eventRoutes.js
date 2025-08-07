@@ -7,11 +7,14 @@ const {
   deleteEvent,
 } = require("../controllers/eventController");
 const authenticateToken = require("../middlewares/authenticateToken");
-const authorizeAdmin = require("../middlewares/authorizeAdmin"); // Assuming you have this middleware for admin authorization
+const authorizeAdmin = require("../middlewares/authorizeAdmin");
 const router = express.Router();
 
+// Public routes
 router.get("/", getAllEvents);
-router.get("/:id", getEventById);
+router.get("/events/:id", getEventById);
+
+// Admin-protected routes
 router.post("/", authenticateToken, authorizeAdmin, createEvent);
 router.put("/:id", authenticateToken, authorizeAdmin, updateEvent);
 router.delete("/:id", authenticateToken, authorizeAdmin, deleteEvent);

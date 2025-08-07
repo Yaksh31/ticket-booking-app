@@ -1,6 +1,6 @@
 const Booking = require("../models/Booking");
 const Event = require("../models/Event");
-const mongoose = require('mongoose'); // Import mongoose to use ObjectId
+const mongoose = require('mongoose');
 
 // Create a booking
 const createBooking = async (req, res) => {
@@ -8,24 +8,26 @@ const createBooking = async (req, res) => {
         let { event, seats, totalPrice } = req.body;
 
         console.log("Request Body:", req.body);
+        console.log("Received event ID:", event, "Type:", typeof event); // Debugging log
 
         // Validate request body
         if (!event || !seats || !totalPrice) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
-        // Ensure the event ID is a valid ObjectId
+        // Check and convert event ID to ObjectId
         if (!mongoose.Types.ObjectId.isValid(event)) {
+            console.error("Invalid event ID format:", event); // Log the invalid ID
             return res.status(400).json({ message: "Invalid event ID" });
         }
-        
-        // Convert event ID to ObjectId
-        event = mongoose.Types.ObjectId(event);
-        const user = req.user.userId; // Assuming user ID is attached by auth middleware
+
+        event = new mongoose.Types.ObjectId(event); // Convert to ObjectId
+        const user = req.user.userId;
 
         // Check if the event exists and has enough available seats
         const eventDoc = await Event.findById(event);
         if (!eventDoc) {
+            console.error("Event not found with ID:", event); // Log if event is not found
             return res.status(404).json({ message: "Event not found" });
         }
 
@@ -33,7 +35,6 @@ const createBooking = async (req, res) => {
             return res.status(400).json({ message: "Not enough seats available" });
         }
 
-        // Create the booking
         const booking = new Booking({
             user,
             event,
@@ -41,16 +42,15 @@ const createBooking = async (req, res) => {
             totalPrice,
         });
 
-        // Save the booking
         await booking.save();
 
-        // Update the event's available seats
+        // Update event's available seats
         eventDoc.seatsAvailable -= seats;
         await eventDoc.save();
 
         res.status(201).json(booking);
     } catch (error) {
-        console.error("Error creating booking:", error); // Improved error logging
+        console.error("Error creating booking:", error);
         res.status(500).json({ message: "An error occurred while creating the booking" });
     }
 };
@@ -62,7 +62,7 @@ const getUserBookings = async (req, res) => {
         const bookings = await Booking.find({ user: userId }).populate("event");
         res.json(bookings);
     } catch (error) {
-        console.error("Error fetching user bookings:", error); // Improved error logging
+        console.error("Error fetching user bookings:", error);
         res.status(500).json({ message: "An error occurred while fetching bookings" });
     }
 };
@@ -77,7 +77,7 @@ const getBookingById = async (req, res) => {
         }
         res.json(booking);
     } catch (error) {
-        console.error("Error fetching booking:", error); // Improved error logging
+        console.error("Error fetching booking:", error);
         res.status(500).json({ message: "An error occurred while fetching the booking" });
     }
 };
@@ -107,7 +107,7 @@ const cancelBooking = async (req, res) => {
         await booking.deleteOne({ _id: bookingId });
         res.json({ message: "Booking canceled" });
     } catch (error) {
-        console.error("Error canceling booking:", error); // Improved error logging
+        console.error("Error canceling booking:", error);
         res.status(500).json({ message: "An error occurred while canceling the booking" });
     }
 };
